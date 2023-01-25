@@ -86,7 +86,7 @@
                             'hobi' => 'Menggambar',
                             'umur' => '33',
                             'jk' => '2',
-                            'golongan' => '3'
+                            'golongan' => '1'
                         ],
                         [
                             'nama' => 'Rita',
@@ -102,7 +102,7 @@
                             'hobi' => 'Membaca',
                             'umur' => '31',
                             'jk' => '1',
-                            'golongan' => '3'
+                            'golongan' => '4'
                         ],
                         [
                             'nama' => 'Ratna',
@@ -118,7 +118,7 @@
                             'hobi' => 'Berlari',
                             'umur' => '27',
                             'jk' => '2',
-                            'golongan' => '1'
+                            'golongan' => '4'
                         ],
                         [
                             'nama' => 'Wawan',
@@ -161,8 +161,10 @@
                                     echo "Rp. 1.000,-";
                                 } else if($data['golongan']==2) {
                                     echo "Rp. 1.500,-";
+                                }else if($data['golongan']==3) {
+                                    echo "Rp. 2.000,-";
                                 }else{
-                                    echo "Rp. 1.000,-";
+                                    echo "Rp. 2.500,-";
                                 }
                                 
                             }else {
