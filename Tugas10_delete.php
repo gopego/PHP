@@ -7,7 +7,7 @@
         echo "berhasil dihapus";
     }
     if (mysqli_query($conn, $query)) {
-        header("location: Tugas8_index.php");
+        header("location: Tugas10_index.php");
     } else {
          echo "Something went wrong. Please try again later.";
     }

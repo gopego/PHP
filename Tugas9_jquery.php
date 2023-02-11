@@ -37,29 +37,9 @@
 </head>
 
 <body>
-    <div class="bar container-fluid bg-dark">
-        <h5 class="text-light">Selamat
-            <?php
-            date_default_timezone_set('Asia/Jakarta');
-            setlocale(LC_ALL, 'id-ID', 'id_ID');
-            if (date("H") < 11) {
-                echo "vagi ";
-            } elseif (date("H") > 11 and date("H") < 15) {
-                echo "siang ";
-            } else {
-                echo "malam ";
-            }
-            ?>
-            Fahmi. Hari ini adalah
-            <?php
-            date_default_timezone_set('Asia/Jakarta');
-            setlocale(LC_ALL, 'id-ID', 'id_ID');
-            echo strftime("%A, %d %B %Y");
-            ?> Pukul <?php echo date("H:i") ?>
-        </h5>
-    </div>
+
     <div class="container d-flex flex-column col-8">
-        <h1 class="text-center mt-4">Tugas PHP 8: CRUD</h1>
+        <h1 class="text-center mt-4">Tugas PHP 9: jQuery Modal</h1>
         <!-- <section>
             <div class="container">
                 <div class="card text-bg-dark">
@@ -90,56 +70,107 @@
                     </div>
                 </div>
         </section> -->
-            
+
         <section style="margin: 50px 0;">
             <div class="container">
-            <!-- Modal trigger button -->
-            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Input
-            </button>
-            
-            <!-- Modal Body -->
-            <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form action="Tugas8_input.php" method="post">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="">Nama barang</label>
-                                    <input type="text" name="nama_barang" id="name" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Harga barang</label>
-                                    <input type="text" name="harga" id="name" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Jumlah barang</label>
-                                    <input type="text" name="jumlah" id="name" class="form-control" required>
-                                </div>
+                <!-- Modal trigger button -->
 
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Input With jQuery
+                </button>
 
-                                <div class="form-group col-lg-2 mt-2" style="display: grid;align-items:  flex-end;">
-                                    <input type="submit" name="submit" id="submit" class="btn btn-primary">
-                                </div>
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                        </form>
-      </div>
-    </div>
-  </div>
-</div>
-            
-            
-            <!-- Optional: Place to the bottom of scripts -->
-            <script>
-                const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
-            
-            </script>
+                            <div class="modal-body">
+                                <form action="Tugas9_insert.php" method="post">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="">Nama barang</label>
+                                            <input type="text" name="nama_barang" id="name" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Harga barang</label>
+                                            <input type="text" name="harga" id="name" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Jumlah barang</label>
+                                            <input type="text" name="jumlah" id="name" class="form-control" required>
+                                        </div>
+
+
+                                        <div class="form-group col-lg-2 mt-2" style="display: grid;align-items:  flex-end;">
+                                            <input type="submit" name="submit" id="submit" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Input
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="Tugas8_input.php" method="post">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="">Nama barang</label>
+                                            <input type="text" name="nama_barang" id="name" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Harga barang</label>
+                                            <input type="text" name="harga" id="name" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Jumlah barang</label>
+                                            <input type="text" name="jumlah" id="name" class="form-control" required>
+                                        </div>
+
+
+                                        <div class="form-group col-lg-2 mt-2" style="display: grid;align-items:  flex-end;">
+                                            <input type="submit" name="submit" id="submit" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <!-- Optional: Place to the bottom of scripts -->
+                <script>
+                    $(document).ready(function() {
+                        $("#myForm").submit(function(e) {
+                            e.preventDefault();
+                            $.ajax({
+                                type: "POST",
+                                url: "Tugas9_insert.php",
+                                data: $("#myForm").serialize(),
+                                success: function(response) {
+                                    $('#myModal').modal('hide');
+                                    alert("Data inserted successfully!");
+                                }
+                            });
+                        });
+                    });
+                </script>
+                <script>
+                    const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+                </script>
                 <table class="table table-dark">
                     <thead>
                         <tr>
@@ -170,7 +201,7 @@
                                     <td class="text-center"><?php echo $harga; ?></td>
                                     <td class="text-center"><?php echo $jumlah; ?></td>
                                     <td class="text-center">
-                                        <a href="Tugas8_update.php?id=<?php echo $Id; ?>" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editmodal<?php echo $Id; ?>">Edit</a>
+                                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editmodal<?php echo $Id; ?>">Edit</a>
 
                                         <a href="Tugas8_delete.php?id=<?php echo $Id; ?>" class="btn btn-danger">Delete</a>
                                     </td>
@@ -200,7 +231,8 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="Tugas8_update.php?id=<?php echo $Id; ?>" method="post">
+                                                <form class=<?="fredit".$Id;?>>
+                                                <input type="hidden" value="<?=$Id?>" name="id">
                                                     <div class="h-100 align-content-center">
                                                         <div class="form-group">
                                                             <label for="">Nama Barang</label>
@@ -217,7 +249,7 @@
 
 
                                                         <div class="form-group col-lg-2 mt-2" style="display: grid;align-items:  flex-end;">
-                                                            <input type="submit" name="submit" id="submit" class="btn btn-primary " value="Update">
+                                                            <button type="button" name="submit" id="<?=$Id ?>" class="btn btn-primary " onclick="test(this.id)">Edit</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -235,6 +267,23 @@
             </div>
         </section>
     </div>
+
+    <script>
+        function test (id) { 
+          //  alert (id);
+          var data=$('.fredit'+id).serialize();
+        
+          $.ajax({
+               type:'POST',
+               url:'Tugas10_edit.php',
+               data:data,
+               success:function(data){
+                //alert(data);
+               window.location.href ="http://localhost:3000/PHP/Tugas9_jquery.php";
+               }
+            });
+          }
+    </script>
 
 
 </body>
