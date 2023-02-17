@@ -2,12 +2,9 @@
 
 class Astro {
     public $array;
-
-    public function __construct($array) {
+    
+    public function display($array) {
         $this->array = $array;
-    }
-
-    public function display() {
         foreach($this->array as $value) {
             echo $value.'<br>';
         }
@@ -15,7 +12,7 @@ class Astro {
 }
 
 $array = ['Mudi','Fahmi','Udin','Adel'];
-$display = new Astro($array);
-$display->display();
+$display = new Astro();
+$display->display($array);
 
 ?>
